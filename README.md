@@ -1,4 +1,4 @@
-# Analytics Portfolio â€” Naveenkumar Pannala
+# Analytics Portfolio - Naveenkumar Pannala
 
 Three independent case studies using synthetic data. No employer or customer data is included.
 
@@ -10,7 +10,7 @@ Live portfolio: https://naveen-analytics-portfolio.ochreiris32.chatgpt.site
 - Banking Power BI: embedded synthetic CSVs, dimensional model, eleven DAX measures, and three report pages.
 
 ## Review the evidence
-Each project includes a README describing metric definitions and limitations. Checkout and revenue contain analysis.sql and analysis.sqlite; queries run independently with SQLite. Banking contains validate_source.py and validation_results.json.
+Each project includes a README describing metric definitions and limitations. Checkout and revenue contain analysis.sql; the linked data bundles include analysis.sqlite for running queries independently with SQLite. Banking contains validate_source.py and validation_results.json.
 
 ## Reproduce
 Use Python 3 with the requirements in requirements.txt. Running `python build_projects.py` regenerates the checkout and revenue synthetic datasets, readmes, analysis databases, and dashboard aggregates with a fixed seed. It writes web assets to ../dist. Run in a disposable copy if you want to preserve the original outputs. Banking uses frozen CSV snapshots embedded in M and is independent of this generator.
