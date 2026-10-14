@@ -1,0 +1,12 @@
+{
+  "control_n": 19903,
+  "treatment_n": 20097,
+  "control_rate": 0.2681002863889866,
+  "treatment_rate": 0.2787480718515201,
+  "absolute_lift": 0.010647785462533532,
+  "relative_lift": 0.03971568104587798,
+  "ci_low": 0.0019125154558988552,
+  "ci_high": 0.019383055469168207,
+  "p_value": 0.016902824172400598,
+  "method": "Two-sided pooled two-proportion z test; unpooled normal 95% CI for absolute difference; intention-to-treat across all assigned visitors."
+}

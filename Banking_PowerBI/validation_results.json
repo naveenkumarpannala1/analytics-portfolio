@@ -1,0 +1,26 @@
+{
+  "status": "source_and_embedded_data_checks_passed",
+  "native_powerbi_validation": "pending",
+  "scope": "Python reconciliation of embedded CSV snapshots and structural references; not DAX/M execution or Power BI rendering",
+  "tables": {
+    "Transactions": 250000,
+    "Customers": 25000,
+    "Products": 8,
+    "Accounts": 70595,
+    "Channels": 5,
+    "Calendar": 974
+  },
+  "relationships": 6,
+  "pages": 3,
+  "visuals": 24,
+  "measures": 11,
+  "metrics": {
+    "bank_revenue_cad": 3911430.27,
+    "transactions": 250000,
+    "customers": 25000,
+    "active_customers": 20233,
+    "inactive_rate": 0.19068,
+    "digital_share": 0.69616,
+    "products_per_customer": 2.8238
+  }
+}

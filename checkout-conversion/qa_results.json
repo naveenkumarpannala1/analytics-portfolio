@@ -1,0 +1,7 @@
+{
+  "rows": 40000,
+  "unique_sessions": 40000,
+  "unique_visitors": 40000,
+  "funnel_errors": 0,
+  "revenue_errors": 0
+}
