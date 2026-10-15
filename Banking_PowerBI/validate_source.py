@@ -6,7 +6,9 @@ root=Path(__file__).parent
 model=json.loads((root/'Banking.SemanticModel/model.bim').read_text())['model']
 data={}
 for table in model['tables']:
-    expression='\n'.join(table['partitions'][0]['source']['expression'])
+    if table['partitions'][0]['source']['type']!='m':continue
+    source_expression=table['partitions'][0]['source']['expression']
+    expression='\n'.join(source_expression) if isinstance(source_expression,list) else source_expression
     encoded=re.search(r'Binary.FromText\("([A-Za-z0-9+/=]+)"',expression).group(1)
     compressed=base64.b64decode(encoded)
     try: raw=zlib.decompress(compressed)
@@ -16,12 +18,13 @@ for table in model['tables']:
     assert set(c['sourceColumn'] for c in table['columns'])<=set(rows[0]),table['name']
     data[table['name']]=rows
 for r in model['relationships']:
+    if r['fromTable'] not in data or r['toTable'] not in data:continue
     dimension=data[r['toTable']]
     keys=[x[r['toColumn']] for x in dimension]
     assert len(keys)==len(set(keys)),r['toTable']
     keyset=set(keys)
     assert all(x[r['fromColumn']] in keyset for x in data[r['fromTable']]),r['name']
-    assert r['crossFilteringBehavior']=='oneDirection'
+    assert r.get('crossFilteringBehavior','oneDirection')=='oneDirection'
 tx=data['Transactions'];customers=data['Customers'];accounts=data['Accounts']
 metrics={
  'bank_revenue_cad':float(sum(Decimal(x['bank_revenue']) for x in tx)),
@@ -51,7 +54,6 @@ for visual in visuals:
     check_fields(v)
     pos=v['position'];p=json.loads(visual.parents[2].joinpath('page.json').read_text())
     assert pos['x']>=0 and pos['y']>=0 and pos['x']+pos['width']<=p['width'] and pos['y']+pos['height']<=p['height'],visual
-result={'status':'source_and_embedded_data_checks_passed','native_powerbi_validation':'pending','scope':'Python reconciliation of embedded CSV snapshots and structural references; not DAX/M execution or Power BI rendering','tables':{k:len(v) for k,v in data.items()},'relationships':len(model['relationships']),'pages':len(pages),'visuals':len(visuals),'measures':sum(len(t.get('measures',[])) for t in model['tables']),'metrics':metrics}
-(root/'validation_results.json').write_text(json.dumps(result,indent=2))
-(root/'validate_source.py').write_text(Path(__file__).read_text().replace("root=Path(__file__).parent","root=Path(__file__).parent"))
+result={'status':'source_and_embedded_data_checks_passed','native_powerbi_validation':'not_executed_by_this_script','scope':'Python reconciliation of embedded CSV snapshots and structural references; does not execute DAX/M or render Power BI. Native Desktop evidence is recorded separately in validation_results.json. Desktop-generated hidden date tables are excluded from CSV checks.','tables':{k:len(v) for k,v in data.items()},'relationships':sum(r['fromTable'] in data and r['toTable'] in data for r in model['relationships']),'pages':len(pages),'visuals':len(visuals),'measures':sum(len(t.get('measures',[])) for t in model['tables']),'metrics':metrics}
+(root/'source_validation_results.json').write_text(json.dumps(result,indent=2))
 print(json.dumps(result,indent=2))
