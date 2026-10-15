@@ -1,5 +1,5 @@
 # Banking Customer Intelligence - Power BI Project
-Status: report/model source authored and schema-checked; NOT yet opened, refreshed, or rendered in Power BI Desktop. Do not describe this as a Desktop-validated PBIX.
+Status: opened and refreshed in Power BI Desktop 2.151.1182.0 on October 14, 2026. Seven native DAX baseline checks passed, all three pages rendered, and selected month/segment filters were verified. A PBIX copy was saved. See NATIVE_VALIDATION.md for scope and download.
 ## Open and review
 1. Extract the entire ZIP on a Windows computer with current Power BI Desktop.
 2. Open Banking.pbip (or Banking.Report/definition.pbir).
@@ -12,7 +12,7 @@ CSV snapshots are compressed and embedded in M expressions for portability. They
 ## Interpretation
 Active/inactive customer status is fixed as of August 31, 2026. Calendar selection filters transactions only; fixed customer-status and account-portfolio measures do not become monthly churn or retention rates. Product/channel filters do not back-filter the customer dimension. Portfolio-customer and transacting-customer denominators are distinct. Cross-product customer counts are not additive. No real financial institution performance is represented.
 ## Validation limits
-JSON schemas and reference integrity are checked. Raw-data KPI reconciliation is checked independently. DAX/M runtime execution and native visual rendering require Desktop and have not been performed here.
+JSON schemas and reference integrity are checked. Raw-data KPI reconciliation is checked independently. Native M refresh, selected DAX checks, and page rendering have been performed in Desktop. See NATIVE_VALIDATION.md for the documented scope.
 ## Official format references
 https://learn.microsoft.com/en-us/power-bi/developer/projects/projects-overview
 https://learn.microsoft.com/en-us/power-bi/developer/projects/projects-report
