@@ -24,8 +24,8 @@ Project scaffolding, analysis code, and presentation were developed with AI assi
 
 Large raw data snapshots and SQLite databases are downloadable from the live case studies. The source generator regenerates checkout and revenue snapshots.
 
-- [Checkout data, SQL and SQLite](https://naveen-analytics-portfolio.ochreiris32.chatgpt.site/assets/checkout-conversion.zip)
-- [Revenue operations data, SQL and SQLite](https://naveen-analytics-portfolio.ochreiris32.chatgpt.site/assets/revenue-operations.zip)
-- [Validated PBIX report](https://naveen-analytics-portfolio.ochreiris32.chatgpt.site/assets/Banking-Validated.pbix)
-- [Complete portable Power BI source](https://naveen-analytics-portfolio.ochreiris32.chatgpt.site/assets/Banking_PowerBI_Project.zip)
+- [Checkout data, SQL and SQLite](https://naveen-analytics-portfolio.ochreiris32.chatgpt.site/assets/Naveenkumar_Pannala_Checkout_Conversion_Project.zip)
+- [Revenue operations data, SQL and SQLite](https://naveen-analytics-portfolio.ochreiris32.chatgpt.site/assets/Naveenkumar_Pannala_Revenue_Analytics_Project.zip)
+- [Validated PBIX report](https://naveen-analytics-portfolio.ochreiris32.chatgpt.site/assets/Naveenkumar_Pannala_Banking_Analytics.pbix)
+- [Complete portable Power BI source](https://naveen-analytics-portfolio.ochreiris32.chatgpt.site/assets/Naveenkumar_Pannala_Banking_PowerBI_Source.zip)
 - [Guided project walkthroughs](https://naveen-analytics-portfolio.ochreiris32.chatgpt.site/walkthrough.html)
