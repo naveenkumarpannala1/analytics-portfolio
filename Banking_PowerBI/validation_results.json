@@ -1,7 +1,7 @@
 {
-  "status": "source_and_embedded_data_checks_passed",
-  "native_powerbi_validation": "pending",
-  "scope": "Python reconciliation of embedded CSV snapshots and structural references; not DAX/M execution or Power BI rendering",
+  "status": "source_embedded_data_and_native_desktop_checks_passed",
+  "native_powerbi_validation": "passed_for_documented_scope",
+  "scope": "Native M refresh of all six tables, DAX pass/fail checks of all seven baseline KPIs, visual inspection of all three report pages, January month slicer and Affluent segment slicer tests, and PBIX save. Not an exhaustive test of every selection or interaction.",
   "tables": {
     "Transactions": 250000,
     "Customers": 25000,
@@ -22,5 +22,26 @@
     "inactive_rate": 0.19068,
     "digital_share": 0.69616,
     "products_per_customer": 2.8238
-  }
+  },
+  "validation_date": "2026-10-14",
+  "desktop_version": "2.151.1182.0",
+  "native_checks": {
+    "six_tables_refreshed": true,
+    "seven_baseline_dax_checks": "PASS",
+    "all_three_pages_rendered": true,
+    "january_2024": {
+      "transactions": 3182,
+      "digital_share_display": "59.7%",
+      "revenue_display": "$35K",
+      "source_revenue_cad": 35437.0,
+      "active_status_card_unchanged": true
+    },
+    "affluent_segment": {
+      "customers": 4195,
+      "revenue_per_customer_display": "$255.35"
+    },
+    "filters_cleared_before_save": true,
+    "pbix_saved": true
+  },
+  "pbix_sha256": "ce7b6f669b08dd7613f0cba035d91d9796e29a2ec2693a718b026c8526844ed5"
 }
