@@ -8,10 +8,10 @@ Passed:
 - Executive, customer value, and products/digital pages rendered charts and cards without visible errors.
 - January 2024 slicer returned 3,182 transactions, 59.7% displayed digital share, and approximately CAD 35K revenue (source: CAD 35,437). Fixed customer-status card remained unchanged.
 - Affluent segment returned 4,195 customers and CAD 255.35 revenue per portfolio customer.
-- Selections were cleared and the baseline restored. Saved Banking-Validated.pbix with the Executive page active.
+- Selections were cleared and the baseline restored. Saved Naveenkumar_Pannala_Banking_Analytics.pbix with the Executive page active.
 
 Scope: selected baseline and filter checks, not exhaustive testing of every slicer combination, cross-highlighting interaction, or future Desktop version. All data is synthetic.
 
 The included validation_results.json documents the exact checks and PBIX checksum. Screenshots and the PBIX are available from the live banking case study.
 
-Download PBIX: https://naveen-analytics-portfolio.ochreiris32.chatgpt.site/assets/Banking-Validated.pbix
+Download PBIX: https://naveen-analytics-portfolio.ochreiris32.chatgpt.site/assets/Naveenkumar_Pannala_Banking_Analytics.pbix
