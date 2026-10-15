@@ -18,7 +18,7 @@ Use Python 3 with the requirements in requirements.txt. Running `python build_pr
 Run `python Banking_PowerBI/validate_source.py` for embedded-data and structural checks. It does not execute DAX/M or render visuals. See Banking_PowerBI/DESKTOP_CHECKLIST.md for native checks.
 
 ## Project status and contribution
-Project scaffolding, analysis code, and presentation were developed with AI assistance. Review the code and assumptions before adapting or presenting them. Professional experience described on the portfolio is separate from these synthetic case studies. Native Power BI refresh and rendering remain pending; no validated PBIX is included.
+Project scaffolding, analysis code, and presentation were developed with AI assistance. Review the code and assumptions before adapting or presenting them. Professional experience described on the portfolio is separate from these synthetic case studies. Native Power BI Desktop validation completed on October 14, 2026: six imported tables refreshed, seven baseline DAX checks passed, all three report pages rendered, and selected month/segment slicers were verified. A validated PBIX is available from the banking case study. See Banking_PowerBI/NATIVE_VALIDATION.md for scope.
 
 ## Datasets and downloads
 
@@ -26,5 +26,6 @@ Large raw data snapshots and SQLite databases are downloadable from the live cas
 
 - [Checkout data, SQL and SQLite](https://naveen-analytics-portfolio.ochreiris32.chatgpt.site/assets/checkout-conversion.zip)
 - [Revenue operations data, SQL and SQLite](https://naveen-analytics-portfolio.ochreiris32.chatgpt.site/assets/revenue-operations.zip)
+- [Validated PBIX report](https://naveen-analytics-portfolio.ochreiris32.chatgpt.site/assets/Banking-Validated.pbix)
 - [Complete portable Power BI source](https://naveen-analytics-portfolio.ochreiris32.chatgpt.site/assets/Banking_PowerBI_Project.zip)
 - [Guided project walkthroughs](https://naveen-analytics-portfolio.ochreiris32.chatgpt.site/walkthrough.html)
